@@ -74,7 +74,7 @@ amzn1: $(addsuffix -amzn1, 18.06.2 18.06.1 18.03.1 17.12.1 17.09.1 17.06.2 17.03
 1.12.6-%-runc:
 	echo "50a19c6ff828c58e5dab13830bd3dacde268afe5"
 
-%-ubuntu18.04: ARCH := amd64
+%-ubuntu18.04: ARCH := arm64
 %-ubuntu18.04:
 	runc="$(shell $(MAKE) -s $@-runc)" && \
 	$(DOCKER) build --build-arg VERSION_ID="18.04" \

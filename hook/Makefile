@@ -11,7 +11,7 @@ DIST_DIR  := $(CURDIR)/../dist
 
 all: ubuntu18.04 ubuntu16.04 ubuntu14.04 debian9 debian8 centos7 amzn2 amzn1
 
-ubuntu%: ARCH := amd64
+ubuntu%: ARCH := arm64
 ubuntu%: $(CURDIR)/Dockerfile.ubuntu
 	$(DOCKER) build --build-arg VERSION_ID="$*" \
 	                --build-arg PKG_VERS="$(VERSION)" \
